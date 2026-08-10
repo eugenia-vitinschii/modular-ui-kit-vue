@@ -29,7 +29,7 @@ export default defineConfig(({ command }) => {
     css: {
       preprocessorOptions: {
         sass: {
-          additionalData: `@use "@/assets/sass/abstracts/index-lib" as *\n`
+          additionalData: `@use "@/assets/sass/abstracts/index" as *\n`
         }
       }
     },

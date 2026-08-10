@@ -1,6 +1,6 @@
 
 /*  STYLES */
-import './assets/sass/library.sass'
+import './assets/sass/app.sass'
 
 /*  FORM ELEMENTS */
 export { default as MukCheckbox } from './components/ui/form/MukCheckbox.vue'

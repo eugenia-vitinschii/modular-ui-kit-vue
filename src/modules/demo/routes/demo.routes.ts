@@ -41,6 +41,12 @@ export const demoRoutes: RouteRecordRaw[] = [
                   name: 'ui-feedback',
                   component: () => import('../pages/FeedbackDemoView.vue'),
                   meta: { title: "Toast and Modal" },
+               },
+               {
+                  path: 'badge',
+                  name: 'ui-badge',
+                  component: () => import('../pages/BadgesView.vue'),
+                  meta: { title: "Badges" },
                }, {
                   path: 'form',
                   name: 'ui-form',

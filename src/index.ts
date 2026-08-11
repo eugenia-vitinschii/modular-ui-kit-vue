@@ -31,6 +31,9 @@ export { default as MukModal } from './components/ui/overlays/MukModal.vue'
 /*  TYPOGRAPHY */
 export { default as MukText } from './components/ui/typography/MukText.vue'
 
+/* DATA DISPLAY */
+export { default as MukBadge } from './components/ui/data-display/MukBadge.vue'
+
 /*  TYPES */
 export type {
    UIVariant, UISize,

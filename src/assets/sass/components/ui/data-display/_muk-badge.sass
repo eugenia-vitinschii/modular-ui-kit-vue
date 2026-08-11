@@ -1,0 +1,40 @@
+/* MUK BAGDE*/
+@use '../../../abstracts/_muk-mixins' as *
+@use '../../../abstracts/_muk-tokens' as *
+
+.muk-badge
+   display: inline-flex
+   justify-content: center
+   align-items: center
+   width: fit-content
+   gap: 8px
+   p, svg
+      background: transparent
+   svg
+      display: block
+      width: 1.2em
+      height: 1.2em
+      fill: currentColor
+      flex-shrink: 0
+
+.muk-badge
+   &--lg
+      font-size: $muk-body-text
+   &--md
+      font-size: $muk-body-text-md
+   &--sm
+      font-size: $muk-body-text-sm
+
+.muk-badge
+   &--primary svg
+     color: $muk-primary
+   &--secondary svg
+      color:  $muk-text
+   &--success svg
+      color:  $muk-success
+   &--warning svg
+      color:  $muk-warning
+   &--danger svg
+      color:  $muk-danger
+   &--muted svg
+      color: $muk-text-muted

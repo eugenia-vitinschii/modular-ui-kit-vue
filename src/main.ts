@@ -1,7 +1,5 @@
 
 import '@/assets/sass/app.sass'
-import '@/assets/sass/library.sass'
-
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'

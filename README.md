@@ -100,6 +100,10 @@ Typography
 
 - MukText: Standardized typography component
 
+Data Display
+
+- MukBadge: Compact badge component with icon, text, and size options
+
 ### Documentation
 
 [![Wiki Documentation](https://img.shields.io/badge/docs-GitHub_Wiki-blue?style=for-the-badge&logo=github)](https://github.com/eugenia-vitinschii/modular-ui-kit/wiki/Muk-Button-Component)
@@ -190,7 +194,7 @@ export type UIVariant = 'primary' | 'danger' | 'warning' | 'success' | 'secondar
 export type UISize = 'sm' | 'md' | 'lg'
 
 /* TEXT */
-export type UITextType = 'muk-heading' | 'muk-subheading' | 'muk-body-text'
+export type UITextType = 'muk-heading' | 'muk-subheading' | 'muk-body-text' | 'muk-none'
 export type UITextAlign = 'left' | 'center' | 'right'
 export type UITextVariant = UIVariant | 'muted'
 

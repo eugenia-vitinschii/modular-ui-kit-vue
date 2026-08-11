@@ -50,6 +50,7 @@ const navConfig: NavGroup[] = [
          { label: 'Buttons', path: '/demo/ui/buttons' },
          { label: 'Component Flow', path: '/demo/ui/flow' },
          { label: 'Feedback & Toast', path: '/demo/ui/feedback' },
+         { label: 'Badges', path: '/demo/ui/badge' },
       ]
    },
    {

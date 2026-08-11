@@ -15,10 +15,10 @@ Clear the npm cache:
 npm cache clean --force
 ```
 
-Install the new version 2.0.0:
+Install the new version:
 
 ```
-npm i modular-ui-kit-vue@2.0.0 --legacy-peer-deps
+npm i modular-ui-kit-vue --legacy-peer-deps
 ```
 
 [![NPM Version](https://img.shields.io/npm/v/modular-ui-kit-vue?color=42b883)](https://www.npmjs.com/package/modular-ui-kit-vue)

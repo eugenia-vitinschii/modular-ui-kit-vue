@@ -103,6 +103,7 @@ Typography
 Data Display
 
 - MukBadge: Compact badge component with icon, text, and size options
+- MukTable Styles: '.muk-table-wrapper, '.muk-table', '.muk-table**actions--row' or '.muk-table**actions--column'
 
 ### Documentation
 

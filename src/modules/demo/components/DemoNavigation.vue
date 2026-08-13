@@ -44,16 +44,6 @@ interface NavGroup {
 
 const navConfig: NavGroup[] = [
    {
-      title: 'General',
-      items: [
-         { label: 'Typography', path: '/demo/ui/text' },
-         { label: 'Buttons', path: '/demo/ui/buttons' },
-         { label: 'Component Flow', path: '/demo/ui/flow' },
-         { label: 'Feedback & Toast', path: '/demo/ui/feedback' },
-         { label: 'Badges', path: '/demo/ui/badge' },
-      ]
-   },
-   {
       title: 'Form Elements',
       items: [
          { label: 'Inputs', path: '/demo/ui/form/inputs' },
@@ -61,6 +51,32 @@ const navConfig: NavGroup[] = [
          { label: 'Textareas', path: '/demo/ui/form/textareas' },
          { label: 'Checkboxes', path: '/demo/ui/form/checkboxes' },
          { label: 'Radio', path: '/demo/ui/form/radio' },
+      ]
+   },
+   {
+      title: 'Buttons',
+      items: [
+         { label: 'Buttons', path: '/demo/ui/buttons' },
+      ]
+   },
+   {
+      title: 'Data Display',
+      items: [
+         { label: 'Badges', path: '/demo/ui/data-display/badge' },
+         { label: 'Table', path: '/demo/ui/data-display/table' },
+      ]
+   },
+   {
+      title: 'General',
+      items: [
+         { label: 'Component Flow', path: '/demo/ui/flow' },
+         { label: 'Feedback & Toast', path: '/demo/ui/feedback' },
+      ]
+   },
+   {
+      title: 'Typography',
+      items: [
+         { label: 'Typography', path: '/demo/ui/typography/text' },
       ]
    },
    {

@@ -3,8 +3,7 @@
       <div class="muk-container">
          <div class="muk-page__wrapper">
             <div class="muk-page__header">
-               <muk-text as="h1" :type="'muk-heading'">Table Preview</muk-text>1>
-               <muk-text></muk-text>
+               <muk-text as="h1" :type="'muk-heading'">Table Preview</muk-text>
             </div>
             <div class="muk-page__content">
                <div class="demo-controls muk-section">

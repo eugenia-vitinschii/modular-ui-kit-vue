@@ -10,39 +10,41 @@
 .muk-table
    border-collapse: collapse
    width: 100%
-   th
-      font-weight: bold
    th, td
       text-align: left
       vertical-align: middle
       padding: 10px
       @include muk-font-size($muk-body-text, 24px)
       color: $muk-text
+
    @media (max-width: 1024px)
       th, td
          @include muk-font-size($muk-body-text-md, 22px)
+
    @media (max-width: 767px)
       th, td
          @include muk-font-size($muk-body-text-sm, 20px)
    th
-      color: var(--muk-text)
+      font-weight: bold
       letter-spacing: 0.9px
    td
       select
          min-width: 120px
-
+         vertical-align: middle
    tbody tr
-      margin: 20px
       transition: $muk-transition
       @include muk-border($muk-border-color: $muk-bg-card)
-   tbody tr:hover
-      background: $muk-bg-soft
-      @include muk-border()
+
+      &:hover
+         background: $muk-bg-soft
+         @include muk-border()
    &__actions
       display: flex
-      gap: 5px
-   &__actions--column
-      flex-direction: column
-   &__actions--row
-      flex-direction: row
-
+      gap: 8px
+      align-items: center
+      &--column
+         flex-direction: column
+         align-items: flex-end
+      &--row
+         flex-direction: row
+         justify-content: flex-end

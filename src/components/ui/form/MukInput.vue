@@ -4,7 +4,7 @@
          {{ label }}
       </label>
       <div class="muk-input__wrapper">
-         <input class="muk-input__control" :class="{ 'is-error': !!error }" :id="id" :type="computedType"
+         <input class="muk-input__field" :class="{ 'is-error': !!error }" :id="id" :type="computedType"
             :placeholder="placeholder" :disabled="disabled" :value="modelValue" :autocomplete="autocomplete"
             @input="onInput" :aria-invalid="!!error"
             :aria-describedby="error ? `${id}-error` : hint ? `${id}-hint` : undefined">

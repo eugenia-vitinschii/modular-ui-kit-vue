@@ -1,9 +1,10 @@
 <template>
    <button class="muk-btn-icon"
-      :class="[`muk-btn-icon--${variant}`, `muk-btn-icon--${size}`, { 'is-loading': loading }]" :disabled="disabled"
-      :type="type" :aria-busy="loading" :aria-label="ariaLabel ? String(ariaLabel) : undefined">
+      :class="[`muk-btn-icon--${variant}`, `muk-btn-icon--${size}`, { 'is-loading': loading, 'has-text': $slots.text }]"
+      :disabled="disabled" :type="type" :aria-busy="loading" :aria-label="ariaLabel ? String(ariaLabel) : undefined">
       <span class="muk-btn-icon__content" v-if="!loading" aria-hidden="true">
          <slot></slot>
+         <slot name="text"></slot>
       </span>
       <template v-else>
          <span class="muk-btn-spinner" aria-hidden="true"></span>

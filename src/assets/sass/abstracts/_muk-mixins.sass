@@ -37,14 +37,15 @@
       cursor: wait
 
 /* =============================== ICON BUTTON MIXINS =============================== */
-@mixin muk-icon-button-size($size, $icon-size)
-   width: $size
+@mixin muk-icon-button-size($size, $icon-size, $font-size)
    height: $size
    min-width: $size
    min-height: $size
    svg
       width: $icon-size
       height: $icon-size
+   span, p
+      font-size: $font-size
 
 @mixin muk-icon-button-variant($color, $hover-color: null, $muk-bg: transparent, $hover-bg: transparent)
    color: $color

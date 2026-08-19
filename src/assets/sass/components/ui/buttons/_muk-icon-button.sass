@@ -3,7 +3,6 @@
 @use '../../../abstracts/_muk-tokens' as *
 @use '../../../abstracts/_muk-mixins' as *
 
-
 .muk-btn-icon
    border: none
    background: none
@@ -14,16 +13,28 @@
    justify-content: center
    margin: 0
    padding: 0
+   &__content
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      gap: 6px 
    svg
       transition: $muk-transition
+      display: block
+      width: 1em 
+      height: 1em
+      pointer-events: none
+   &.has-text
+      width: auto
+      padding: 0 10px
    &--sm
-      @include muk-icon-button-size(32px, 18px)
+      @include muk-icon-button-size(32px, 18px, 13px)
       --spinner-size: 14px
    &--md
-      @include muk-icon-button-size(40px, 22px)
+      @include muk-icon-button-size(40px, 22px, 15px)
       --spinner-size: 18px
    &--lg
-      @include muk-icon-button-size(48px, 26px)
+      @include muk-icon-button-size(48px, 26px,17px)
       --spinner-size: 22px
    &--primary
       @include muk-icon-button-variant($muk-primary, $muk-primary-hover)

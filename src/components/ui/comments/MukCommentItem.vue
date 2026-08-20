@@ -12,7 +12,7 @@
       </div>
       <div class="muk-comment-item__content">
          <div class="muk-comment-item__content--header">
-            <muk-text>{{ name }}</muk-text>
+            <muk-text :as="authorProfile ? 'router-link' : 'p'" :to="authorProfile">{{ name }}</muk-text>
             <muk-text variant="muted" type="muk-caption">{{ created }}</muk-text>
          </div>
          <div class="muk-comment-item__content--about" v-if="about">
@@ -39,6 +39,7 @@ interface Props {
    text?: string,
    about?: string,
    avatar?: string,
+   authorProfile?: string | object
 }
 
 defineProps<Props>()

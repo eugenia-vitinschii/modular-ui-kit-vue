@@ -27,7 +27,7 @@
                </div>
                <div class="muk-comment-wrapper  muk-section">
                   <muk-comment-item name="Eugenia Vitinschii" created="5 minutes ago"
-                     :about="showAbout ? 'frontend dev' : undefined"
+                     :about="showAbout ? 'frontend dev' : undefined" :authorProfile="'/'"
                      :avatar="avatarType === 'image' ? 'https://i.pravatar.cc/150?img=5' : undefined"
                      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, modi consequatur. Voluptatibus, animi">
                      <template #avatar v-if="avatarType === 'initials'">

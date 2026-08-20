@@ -121,13 +121,3 @@ function handleConfirm() {
 }
 
 </script>
-
-<style lang="sass">
-
-.demo-controls__buttons 
-   display: flex 
-   align-items: start
-   justify-content: space-between
-   flex-direction: column
-   gap: 20px
-</style>

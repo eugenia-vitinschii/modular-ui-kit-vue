@@ -89,12 +89,6 @@ const selectedVariant = ref<UITextVariant>('secondary')
 </script>
 
 <style lang="sass">
-.demo-controls--row
-   display: flex
-   align-items: center
-   justify-content: start
-   flex-direction: row
-   flex-wrap: wrap
 
 .badges-wrapper
    display: flex

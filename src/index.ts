@@ -34,6 +34,10 @@ export { default as MukText } from './components/ui/typography/MukText.vue'
 /* DATA DISPLAY */
 export { default as MukBadge } from './components/ui/data-display/MukBadge.vue'
 
+/* COMMNETS */
+export { default as MukCommentItem } from './components/ui/comments/MukCommentItem.vue'
+export { default as MukCommentForm } from './components/ui/comments/MukCommentForm.vue'
+
 /*  TYPES */
 export type {
    UIVariant, UISize,

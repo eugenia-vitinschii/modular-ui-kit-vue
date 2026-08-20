@@ -1,7 +1,12 @@
 # modular-ui-kit Demo & Playground
 
-⚠️ Upgrading to Version 2.0.0 (Breaking Changes)
-If you are upgrading from v1.x and your components do not use the Muk prefix (e.g., you were using BaseInput instead of MukInput), please follow these steps to perform a clean reinstallation and flush the package cache:
+🔔 NEW components:
+
+- MukCommentItem,
+- MukCommentForm
+
+  ⚠️ Upgrading to Version 2.5.0 (Breaking Changes)
+  If you are upgrading from v1.x and your components do not use the Muk prefix (e.g., you were using BaseInput instead of MukInput), please follow these steps to perform a clean reinstallation and flush the package cache:
 
 Uninstall the old version:
 

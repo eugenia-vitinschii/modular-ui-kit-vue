@@ -21,15 +21,19 @@
                   </div>
                </div>
                <div class="demo-controls muk-section">
-                  <muk-text as="h2" :type="'muk-heading'" :variant="selectedVariant" :align="selectedAlign">
+                  <muk-text as="h2" type="muk-heading" :variant="selectedVariant" :align="selectedAlign">
                      {{ demoText }}</muk-text>
-                  <muk-text :type="'muk-subheading'" :variant="selectedVariant" :align="selectedAlign">{{ demoText
-                  }}</muk-text>
+                  <muk-text type="muk-subheading" :variant="selectedVariant" :align="selectedAlign">{{ demoText
+                     }}</muk-text>
                   <muk-text :variant="selectedVariant" :align="selectedAlign">{{ demoText
-                  }}</muk-text>
+                     }}</muk-text>
+                  <muk-text type="muk-caption" :variant="selectedVariant" :align="selectedAlign">{{ demoText
+                     }}</muk-text>
+                  <muk-text type="muk-none" :variant="selectedVariant" :align="selectedAlign">{{ demoText
+                     }}</muk-text>
                </div>
                <div class="demo-controls muk-section">
-                  <muk-text as="h3" :type="'muk-heading'">Custom Tags & Links (`as` prop) </muk-text>
+                  <muk-text as="h3" type="muk-heading">Custom Tags & Links (`as` prop) </muk-text>
                   <muk-text as="a" href="#" :type="'muk-subheading'">This is a Subheading rendered as a link (a
                      tag)</muk-text>
                   <muk-text>Rendered as default paragraph</muk-text>
@@ -70,13 +74,3 @@ const selectedVariant = ref<UITextVariant>('secondary')
 const selectedAlign = ref<UITextAlign>('left')
 
 </script>
-
-
-<style lang="sass">
-.demo-controls--row
-   display: flex
-   align-items: center
-   justify-content: start
-   flex-direction: row
-   flex-wrap: wrap
-</style>

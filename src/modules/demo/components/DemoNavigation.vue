@@ -52,6 +52,7 @@ const navConfig: NavGroup[] = [
          { label: 'Feedback & Toast', path: '/demo/ui/feedback' },
          { label: 'Badges', path: '/demo/ui/badge' },
          { label: 'Table', path: '/demo/ui/table' },
+         { label: 'Comments', path: '/demo/ui/comments' },
       ]
    },
    {

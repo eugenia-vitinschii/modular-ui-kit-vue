@@ -53,6 +53,12 @@ export const demoRoutes: RouteRecordRaw[] = [
                   name: 'ui-table',
                   component: () => import('../pages/TableView.vue'),
                   meta: { title: "Table" },
+               },
+               {
+                  path: 'comments',
+                  name: 'ui-comment',
+                  component: () => import('../pages/CommentView.vue'),
+                  meta: { title: "Comments" },
                }, {
                   path: 'form',
                   name: 'ui-form',

@@ -1,0 +1,45 @@
+/* ================= COMMENTS ITEM =================  */
+   
+@use '../../../abstracts/_muk-tokens' as *
+@use '../../../abstracts/_muk-mixins' as *
+
+.muk-comment-item
+   display: flex
+   align-items: flex-start
+   gap: 8px
+   &__avatar
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      overflow: hidden
+      background-color: $muk-bg-soft
+      flex-shrink: 0
+      p,span
+         padding: 0
+         margin: 0
+         line-height: 1
+         text-transform: uppercase
+      img
+         display: block
+         width: 100%
+         height: 100%
+         object-fit: cover
+      svg
+         width: 85%
+         height: 85%
+         fill: $muk-text-muted
+   &__content--header
+      display: flex
+      align-items: flex-start
+      gap: 5px
+      p
+         margin: 0
+   @media  ( max-width: 600px )
+      &__content--header
+         flex-direction: column
+   &__content--actions
+      display: flex
+      gap: 8px

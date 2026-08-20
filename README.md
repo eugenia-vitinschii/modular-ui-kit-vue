@@ -195,7 +195,7 @@ export type UIVariant = 'primary' | 'danger' | 'warning' | 'success' | 'secondar
 export type UISize = 'sm' | 'md' | 'lg'
 
 /* TEXT */
-export type UITextType = 'muk-heading' | 'muk-subheading' | 'muk-body-text' | 'muk-none'
+export type UITextType = 'muk-heading' | 'muk-subheading' | 'muk-body-text' | 'muk-caption' | 'muk-none'
 export type UITextAlign = 'left' | 'center' | 'right'
 export type UITextVariant = UIVariant | 'muted'
 
@@ -250,17 +250,21 @@ open or create app.sass, copy and use:
 
   /* === Typography === */
   --muk-font-family: 'Inter', system-ui, -apple-system, sans-serif
+
   --muk-font-heading: 26px
   --muk-font-subheading: 19px
   --muk-font-body: 16px
+  --muk-caption: 14px
 
   --muk-font-heading-md: 24px
   --muk-font-subheading-md: 18px
   --muk-font-body-md: 15px
+  --muk-caption-md: 13px
 
   --muk-font-heading-sm: 20px
   --muk-font-subheading-sm: 16px
   --muk-font-body-sm: 14px
+  --muk-caption-sm: 13px
 
   /* === Borders === */
   --muk-border-color: rgba(236, 238, 242, 0.08)
@@ -282,6 +286,60 @@ open or create app.sass, copy and use:
   --muk-transition: all 0.3s ease-out
   --muk-opacity: 0.4
 
+```
+
+```
+/* === Colors === */
+$muk-text: var(--muk-text)
+$muk-text-muted: var(--muk-text-muted)
+
+$muk-bg: var(--muk-bg)
+$muk-bg-soft: var(--muk-bg-soft)
+$muk-bg-card: var(--muk-bg-card)
+$muk-bg-code: var(--muk-bg-code)
+
+$muk-primary: var(--muk-primary)
+$muk-primary-hover: var(--muk-primary-hover)
+$muk-danger: var(--muk-danger)
+$muk-success: var(--muk-success)
+$muk-warning: var(--muk-warning)
+
+/* === Typography === */
+$muk-font-family: var(--muk-font-family)
+
+$muk-heading: var(--muk-font-heading)
+$muk-subheading: var(--muk-font-subheading)
+$muk-body-text: var(--muk-font-body)
+$muk-caption: var(--muk-caption)
+
+$muk-heading-md: var(--muk-font-heading-md)
+$muk-subheading-md: var(--muk-font-subheading-md)
+$muk-body-text-md: var(--muk-font-body-md)
+$muk-caption-md: var(--muk-caption-md)
+
+$muk-heading-sm: var(--muk-font-heading-sm)
+$muk-subheading-sm: var(--muk-font-subheading-sm)
+$muk-body-text-sm: var(--muk-font-body-sm)
+$muk-caption-sm: var(--muk-caption-sm)
+
+/* === Borders === */
+$muk-border-color: var(--muk-border-color)
+$muk-border-width: var(--muk-border-width)
+$muk-border-style: var(--muk-border-style)
+$muk-border-radius: var(--muk-border-radius)
+
+/* === Space Tokens === */
+$muk-space-content-sm: var(--muk-space-content-sm)
+$muk-space-content-md: var(--muk-space-content-md)
+$muk-space-content-lg: var(--muk-space-content-lg)
+
+$muk-space-container-sm: var(--muk-space-container-sm)
+$muk-space-container-md: var(--muk-space-container-md)
+$muk-space-container-lg: var(--muk-space-container-lg)
+
+/* === Design === */
+$muk-transition: var(--muk-transition)
+$muk-opacity: var(--muk-opacity)
 ```
 
 import styles inside main.ts

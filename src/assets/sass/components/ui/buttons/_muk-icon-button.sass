@@ -9,14 +9,14 @@
    cursor: pointer
    display: inline-flex
    align-items: center
+   justify-content: start
    transition: $muk-transition     
-   justify-content: center
    margin: 0
    padding: 0
    &__content
       display: inline-flex
       align-items: center
-      justify-content: center
+      justify-content: flex-start
       gap: 6px 
    svg
       transition: $muk-transition
@@ -26,7 +26,6 @@
       pointer-events: none
    &.has-text
       width: auto
-      padding: 0 10px
    &--sm
       @include muk-icon-button-size(32px, 18px, 13px)
       --spinner-size: 14px

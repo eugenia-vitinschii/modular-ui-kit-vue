@@ -1,5 +1,5 @@
 <template>
-   <form class="muk-comment-form muk-section__item" @submit.prevent="handletSubmit">
+   <form class="muk-comment-form muk-section__item" @submit.prevent="handleSubmit">
       <div class="muk-comment-form__avatar">
          <slot name="avatar">
             <img :src="avatar" v-if="avatar">
@@ -13,7 +13,7 @@
       <div class="muk-comment-form__content">
          <div class="muk-comment-form__content--field">
             <muk-textarea v-model="content" :placeholder="placeholder" :disabled="disabled || loading"
-               @keydown.ctrl.enter="handletSubmit" @keydown.meta.enter="handletSubmit" width="100%" />
+               @keydown.ctrl.enter="handleSubmit" @keydown.meta.enter="handleSubmit" width="100%" />
          </div>
          <muk-icon-button size="sm" type="submit" :disabled="!isValid || disabled || loading" :loading="loading"
             aria-label="create comment">
@@ -46,12 +46,12 @@ const props = withDefaults(defineProps<Props>(), ({
    placeholder: 'Type ...',
    disabled: false,
    loading: false,
-   resentOnSubmit: true
+   resetOnSubmit: true
 }))
 
 /* EMIT */
 const emit = defineEmits<{
-   (e: "submit", value: string): void
+   (e: "submit", value: { content: string }): void
 }>()
 
 /* LOCAL STATE */
@@ -59,11 +59,11 @@ const content = ref('')
 const isValid = computed(() => content.value.trim().length > 0)
 
 /* submit */
-function handletSubmit() {
+function handleSubmit() {
    if (!isValid.value || props.disabled || props.loading) return
 
    const textToSend = content.value.trim()
-   emit('submit', textToSend)
+   emit('submit', { content: textToSend })
 
    if (props.resetOnSubmit) {
       content.value = ''

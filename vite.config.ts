@@ -2,7 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
-
+import dts from 'vite-plugin-dts'
 import { resolve } from 'node:path'
 
 export default defineConfig(({ command }) => {
@@ -13,6 +13,11 @@ export default defineConfig(({ command }) => {
       vue(),
       // dev
       !isBuild && vueDevTools(),
+      //d.ts generator
+      isBuild && dts({
+        tsconfigPath: './tsconfig.json',
+        cleanVueFileName: true,
+      }),
     ].filter(Boolean),
 
     server: {

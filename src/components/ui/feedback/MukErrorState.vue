@@ -4,7 +4,7 @@
          <muk-text type="muk-subheading" as="h3" :align="'center'" variant="danger">{{ title }}</muk-text>
          <muk-text :align="'center'">{{ description }}</muk-text>
       </div>
-      <div class="muk-error-state__action">
+      <div v-if="$slots.action" class="muk-error-state__action">
          <slot name="action"></slot>
       </div>
    </div>
@@ -27,7 +27,7 @@ const props = withDefaults(
 )
 
 
-defineSlots<{
-   action?: (props: {}) => any
+const slots = defineSlots<{
+   action?: () => any
 }>()
 </script>

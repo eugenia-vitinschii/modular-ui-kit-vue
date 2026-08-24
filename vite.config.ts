@@ -15,8 +15,9 @@ export default defineConfig(({ command }) => {
       !isBuild && vueDevTools(),
       //d.ts generator
       isBuild && dts({
-        tsconfigPath: './tsconfig.json',
+        tsconfigPath: './tsconfig.app.json',
         cleanVueFileName: true,
+
       }),
     ].filter(Boolean),
 

@@ -31,8 +31,8 @@ withDefaults(
    }
 )
 
-// defineSlots<{
-//    action?(props: object): any
-// }>()
+defineSlots<{
+   action?: (props: {}) => any
+}>()
 
 </script>

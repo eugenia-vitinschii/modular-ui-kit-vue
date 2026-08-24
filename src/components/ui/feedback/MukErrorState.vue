@@ -25,4 +25,9 @@ const props = withDefaults(
       description: 'Failed to fetch data. Please try again.',
    }
 )
+
+
+defineSlots<{
+   action?: (props: {}) => any
+}>()
 </script>

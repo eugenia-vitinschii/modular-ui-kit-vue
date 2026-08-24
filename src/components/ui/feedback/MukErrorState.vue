@@ -29,6 +29,6 @@ const props = withDefaults(
 
 
 const slots = defineSlots<{
-   action?: () => Slot
+   action?: Slot
 }>()
 </script>

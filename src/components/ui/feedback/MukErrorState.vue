@@ -12,6 +12,7 @@
 
 <script setup lang="ts">
 /* COMPONENTS */
+import type { VNode } from 'vue';
 import MukText from '../typography/MukText.vue';
 
 /* PROPS */
@@ -28,6 +29,6 @@ const props = withDefaults(
 
 
 const slots = defineSlots<{
-   action?: () => any
+   action?: () => VNode
 }>()
 </script>

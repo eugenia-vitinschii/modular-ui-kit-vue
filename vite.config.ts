@@ -14,11 +14,13 @@ export default defineConfig(({ command }) => {
       // dev
       !isBuild && vueDevTools(),
       //d.ts generator
-      isBuild && dts({
-        tsconfigPath: './tsconfig.app.json',
-        cleanVueFileName: true,
+      // isBuild && dts({
+      //   tsconfigPath: './tsconfig.app.json',
+      //   outDir: 'dist',
+      //   шnsertTypesEntry: true,
+      //   cleanVueFileName: true,
 
-      }),
+      // }),
     ].filter(Boolean),
 
     server: {

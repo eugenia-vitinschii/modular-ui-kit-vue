@@ -42,7 +42,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp src/index.d.ts dist/index.d.ts",
+    "build": "vue-tsc -p tsconfig.app.json --emitDeclarationOnly && vite build",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",

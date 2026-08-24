@@ -44,4 +44,9 @@ interface Props {
 
 defineProps<Props>()
 
+/* SLOTS */
+defineSlots<{
+   avatar?: (props: {}) => any
+   actions?: (props: { id?: string | number }) => any
+}>()
 </script>

@@ -49,9 +49,12 @@ const props = withDefaults(defineProps<Props>(), ({
    resetOnSubmit: true
 }))
 
-/* EMIT */
 const emit = defineEmits<{
    (e: "submit", value: { content: string }): void
+}>()
+/* SLOTS */
+defineSlots<{
+   avatar?: (props: {}) => any
 }>()
 
 /* LOCAL STATE */

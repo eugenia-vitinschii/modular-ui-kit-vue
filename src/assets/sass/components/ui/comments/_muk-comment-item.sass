@@ -31,6 +31,8 @@
          width: 85%
          height: 85%
          fill: $muk-text-muted
+   &__content
+      width: 100%
    &__content--header
       display: flex
       align-items: center
@@ -38,8 +40,12 @@
       p
          margin: 0
    &__content--comment
+      @include muk-border()
       background: $muk-bg-soft
-      padding: 5px 10px
+      padding: 15px 10px
+      margin: 10px 0px
+      p
+         margin: 0
    @media  ( max-width: 600px )
       &__content--header
          flex-direction: column

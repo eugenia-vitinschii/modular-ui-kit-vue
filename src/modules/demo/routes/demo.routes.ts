@@ -49,6 +49,12 @@ export const demoRoutes: RouteRecordRaw[] = [
                   meta: { title: "Badges" },
                },
                {
+                  path: 'metrics',
+                  name: 'ui-metric',
+                  component: () => import('../pages/MetricCardView.vue'),
+                  meta: { title: 'Metric Cards' },
+               },
+               {
                   path: 'table',
                   name: 'ui-table',
                   component: () => import('../pages/TableView.vue'),

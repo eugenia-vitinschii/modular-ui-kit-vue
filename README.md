@@ -7,7 +7,7 @@
 🚀 New component MukMetricCard
 
 - import { MukMetricCard } from 'modular-ui-kit-vue'
-- wrapper <div class="muk-metric-card__wrapper"></div>
+- wrapper `<div class="muk-metric-card__wrapper"></div>`
 
 🚀 New helper class Responsive SVG Icon
 

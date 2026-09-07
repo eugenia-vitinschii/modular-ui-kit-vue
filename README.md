@@ -4,8 +4,17 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/modular-ui-kit-vue?color=35495e)](https://www.npmjs.com/package/modular-ui-kit-vue)
 [![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/eugenia-vitinschii/2e6247835bbf3928be881ca260cad051/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
 
-⚠️ Upgrading to Version 2.0.0 (Breaking Changes)
-If you are upgrading from v1.x and your components do not use the Muk prefix (e.g., you were using BaseInput instead of MukInput), please follow these steps to perform a clean reinstallation and flush the package cache:
+🚀 New component MukMetricCard
+
+- import { MukMetricCard } from 'modular-ui-kit-vue'
+- wrapper <div class="muk-metric-card__wrapper"></div>
+
+🚀 New helper class Responsive SVG Icon
+
+- muk-svg-icon
+
+  ⚠️ Upgrading to Version 2.0.0 (Breaking Changes)
+  If you are upgrading from v1.x and your components do not use the Muk prefix (e.g., you were using BaseInput instead of MukInput), please follow these steps to perform a clean reinstallation and flush the package cache:
 
 Uninstall the old version:
 
@@ -55,9 +64,9 @@ yarn add modular-ui-kit-vue
 
 ```
 <template>
-  <muk-text as="h1" :type="'muk-heading'" :variant="'primary'">Modular UI Kit</muk-text>
-  <muk-text as="h2" :type="'muk-subheading'" :variant="'warning'">Craft flexible & lightweight Vue 3 interface<base-text>
-  <muk-text :variant="'muted'">Explore reusable components, custom design tokens, and flexible typography out of the box.</base-text>
+  <muk-text as="h1" type="muk-heading" variant="primary">Modular UI Kit</muk-text>
+  <muk-text as="h2" type="muk-subheading" variant="warning">Craft flexible & lightweight Vue 3 interface<base-text>
+  <muk-text variant="muted">Explore reusable components, custom design tokens, and flexible typography out of the box.</base-text>
 </template>
 <script setup lang="ts">
 import { MukText } from 'modular-ui-kit-vue'
@@ -103,7 +112,8 @@ Typography
 Data Display
 
 - MukBadge: Compact badge component with icon, text, and size options
-- MukTable Styles: '.muk-table-wrapper, '.muk-table', '.muk-table**actions--row' or '.muk-table**actions--column'
+- MukMetricCard: Metric card component featuring title/value displays, optional trend indicator with invert support, loading state, and custom #icon slot
+- MukTable classes only: '.muk-table-wrapper, '.muk-table', '.muk-table**actions--row' or '.muk-table**actions--column'
 
 ### Documentation
 
@@ -161,7 +171,7 @@ Supported variants:
 
 - type UIVariant = 'primary' | 'danger' | 'warning' | 'success' | 'secondary'
 - type UITextVariant = UIVariant | 'muted'
-- type UITextType = 'muk-heading' | 'muk-subheading' | 'muk-body-text'
+- type UITextType = 'muk-heading' | 'muk-subheading' | 'muk-body-text'| 'muk-caption' | 'muk-none'
 - type UITextAlign = 'left' | 'center' | 'right'
 
 #### Buttons

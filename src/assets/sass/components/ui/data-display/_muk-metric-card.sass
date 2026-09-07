@@ -1,8 +1,31 @@
+/* MUK METRIC CARD */
+
+@use '../../../abstracts/_muk-mixins' as *
+@use '../../../abstracts/_muk-tokens' as *
+
+.muk-metric-card__wrapper
+   display: grid
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+   gap: 12px
+   width: 100%
 
 
 .muk-metric-card
-   width: 400px
+   @include muk-border()
+   width: 100%
+   padding: 17px
+   background: $muk-bg
+   p
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+   &--loading
+      margin: 18px 0px
    &__data, &__stats
       display: flex
       align-items: center
       justify-content: space-between
+   &__data--head
+      display: flex
+      flex-direction: column
+      min-width: 0

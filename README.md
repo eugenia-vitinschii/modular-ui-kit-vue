@@ -1,12 +1,16 @@
 # modular-ui-kit Demo & Playground
 
-🔔 NEW components:
+🚀 New component MukMetricCard
 
-- MukCommentItem,
-- MukCommentForm
+- import { MukMetricCard } from 'modular-ui-kit-vue'
+- wrapper `<div class="muk-metric-card__wrapper"></div>`
 
-  ⚠️ Upgrading to Version 2.5.0 (Breaking Changes)
-  If you are upgrading from v1.x and your components do not use the Muk prefix (e.g., you were using BaseInput instead of MukInput), please follow these steps to perform a clean reinstallation and flush the package cache:
+🚀 New helper class Responsive SVG Icon
+
+- .muk-svg-icon
+
+⚠️ Upgrading to Version 2.5.0 (Breaking Changes)
+If you are upgrading from v1.x and your components do not use the Muk prefix (e.g., you were using BaseInput instead of MukInput), please follow these steps to perform a clean reinstallation and flush the package cache:
 
 Uninstall the old version:
 

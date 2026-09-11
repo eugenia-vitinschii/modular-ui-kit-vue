@@ -4,12 +4,23 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/modular-ui-kit-vue?color=35495e)](https://www.npmjs.com/package/modular-ui-kit-vue)
 [![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/eugenia-vitinschii/2e6247835bbf3928be881ca260cad051/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
 
-🚀 New component MukMetricCard
+New components
 
-- import { MukMetricCard } from 'modular-ui-kit-vue'
-- wrapper `<div class="muk-metric-card__wrapper"></div>`
+- MukMetricCard
+  - import { MukMetricCard} from 'modular-ui-kit-vue'
+  - wrapper `.muk-metric-card__wrappe`
+- MukChart
+  - import { MukChart } from 'modular-ui-kit-vue'
+  - wrapper .muk-chart\_\_wrapper`
+  - requires `chart.js` as a peer dependency
 
-🚀 New helper class Responsive SVG Icon
+Feedback components update
+
+- added dynamic `width` and `height` props ( string | number )
+  - `<muk-empty-state height="100%" width="100%" />`
+  - `<muk-error-state height="100%" width="100%" />`
+
+New helper class Responsive SVG Icon
 
 - muk-svg-icon
 

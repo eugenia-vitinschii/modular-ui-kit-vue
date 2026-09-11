@@ -61,6 +61,12 @@ export const demoRoutes: RouteRecordRaw[] = [
                   meta: { title: "Table" },
                },
                {
+                  path: 'charts',
+                  name: 'ui-chart',
+                  component: () => import('../pages/ChartView.vue'),
+                  meta: { title: "Charts" },
+               },
+               {
                   path: 'comments',
                   name: 'ui-comment',
                   component: () => import('../pages/CommentView.vue'),

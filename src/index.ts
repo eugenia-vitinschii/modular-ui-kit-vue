@@ -34,6 +34,7 @@ export { default as MukText } from './components/ui/typography/MukText.vue'
 /* DATA DISPLAY */
 export { default as MukBadge } from './components/ui/data-display/MukBadge.vue'
 export { default as MukMetricCard } from './components/ui/data-display/MukMetricCard.vue'
+export { default as MukChart } from './components/ui/data-display/MukChart.vue'
 
 /* COMMNETS */
 export { default as MukCommentItem } from './components/ui/comments/MukCommentItem.vue'

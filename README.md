@@ -1,13 +1,24 @@
 # modular-ui-kit Demo & Playground
 
-🚀 New component MukMetricCard
+New components
 
-- import { MukMetricCard } from 'modular-ui-kit-vue'
-- wrapper `<div class="muk-metric-card__wrapper"></div>`
+- MukMetricCard
+  - import { MukMetricCard} from 'modular-ui-kit-vue'
+  - wrapper `.muk-metric-card__wrappe`
+- MukChart
+  - import { MukChart } from 'modular-ui-kit-vue'
+  - wrapper .muk-chart\_\_wrapper`
+  - requires `chart.js` as a peer dependency
 
-🚀 New helper class Responsive SVG Icon
+Feedback components update
 
-- .muk-svg-icon
+- added dynamic `width` and `height` props ( string | number )
+  - `<muk-empty-state height="100%" width="100%" />`
+  - `<muk-error-state height="100%" width="100%" />`
+
+New helper class Responsive SVG Icon
+
+- `.muk-svg-icon`
 
 ⚠️ Upgrading to Version 2.5.0 (Breaking Changes)
 If you are upgrading from v1.x and your components do not use the Muk prefix (e.g., you were using BaseInput instead of MukInput), please follow these steps to perform a clean reinstallation and flush the package cache:

@@ -91,6 +91,12 @@ export const demoRoutes: RouteRecordRaw[] = [
                         component: () => import('../pages/MetricCardView.vue'),
                         meta: { title: "Metric Cards" },
                      },
+                     {
+                        path: 'charts',
+                        name: 'ui-data-display-chart',
+                        component: () => import('../pages/ChartView.vue'),
+                        meta: { title: "Charts" },
+                     },
 
                   ]
                },

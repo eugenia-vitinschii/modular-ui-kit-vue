@@ -66,6 +66,7 @@ const navConfig: NavGroup[] = [
          { label: 'Table', path: '/demo/ui/data-display/table' },
          { label: 'Comments', path: '/demo/ui/comments' },
          { label: 'Metric cards', path: '/demo/ui/data-display/metric-cards' },
+         { label: 'Charts', path: '/demo/ui/data-display/charts' },
       ]
    },
    {

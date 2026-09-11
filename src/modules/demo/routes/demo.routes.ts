@@ -28,31 +28,31 @@ export const demoRoutes: RouteRecordRaw[] = [
                      {
                         path: 'inputs',
                         name: 'ui-form-inputs',
-                        component: () => import('../pages/InputView.vue'),
+                        component: () => import('../pages/form-elements/InputView.vue'),
                         meta: { title: "Inputs" }
                      },
                      {
                         path: 'selects',
                         name: 'ui-form-selects',
-                        component: () => import('../pages/SelectView.vue'),
+                        component: () => import('../pages/form-elements/SelectView.vue'),
                         meta: { title: "Selects" }
                      },
                      {
                         path: 'textareas',
                         name: 'ui-form-textareas',
-                        component: () => import('../pages/TextareaView.vue'),
+                        component: () => import('../pages/form-elements/TextareaView.vue'),
                         meta: { title: "Textareas" }
                      },
                      {
                         path: 'checkboxes',
                         name: 'ui-form-checkboxes',
-                        component: () => import('../pages/CheckboxView.vue'),
+                        component: () => import('../pages/form-elements/CheckboxView.vue'),
                         meta: { title: "Checkboxes" }
                      },
                      {
                         path: 'radio',
                         name: 'ui-form-radio',
-                        component: () => import('../pages/RadioView.vue'),
+                        component: () => import('../pages/form-elements/RadioView.vue'),
                         meta: { title: "Radio" }
                      },
                   ]
@@ -76,25 +76,25 @@ export const demoRoutes: RouteRecordRaw[] = [
                      {
                         path: 'badge',
                         name: 'ui-data-display-badge',
-                        component: () => import('../pages/BadgesView.vue'),
+                        component: () => import('../pages/data-display/BadgesView.vue'),
                         meta: { title: "Badges" },
                      },
                      {
                         path: 'table',
                         name: 'ui-data-display-table',
-                        component: () => import('../pages/TableView.vue'),
+                        component: () => import('../pages/data-display/TableView.vue'),
                         meta: { title: "Table" },
                      },
                      {
                         path: 'metric-cards',
                         name: 'ui-data-display-metric-card',
-                        component: () => import('../pages/MetricCardView.vue'),
+                        component: () => import('../pages/data-display/MetricCardView.vue'),
                         meta: { title: "Metric Cards" },
                      },
                      {
                         path: 'charts',
                         name: 'ui-data-display-chart',
-                        component: () => import('../pages/ChartView.vue'),
+                        component: () => import('../pages/data-display/ChartView.vue'),
                         meta: { title: "Charts" },
                      },
 
@@ -105,13 +105,13 @@ export const demoRoutes: RouteRecordRaw[] = [
                {
                   path: 'flow',
                   name: 'ui-flow',
-                  component: () => import('../pages/ComponentFlowView.vue'),
+                  component: () => import('../pages/data-display/ComponentFlowView.vue'),
                   meta: { title: "Component Flow" },
                },
                {
                   path: 'feedback',
                   name: 'ui-feedback',
-                  component: () => import('../pages/FeedbackDemoView.vue'),
+                  component: () => import('../pages/feedback/FeedbackDemoView.vue'),
                   meta: { title: "Toast and Modal" },
                },
 
@@ -125,7 +125,7 @@ export const demoRoutes: RouteRecordRaw[] = [
                      {
                         path: 'text',
                         name: 'ui-typography-text',
-                        component: () => import('../pages/TextView.vue'),
+                        component: () => import('../pages/form-elements/TextView.vue'),
                         meta: { title: "Text" },
                      },
                   ]
@@ -133,7 +133,7 @@ export const demoRoutes: RouteRecordRaw[] = [
                {
                   path: 'comments',
                   name: 'ui-comment',
-                  component: () => import('../pages/CommentView.vue'),
+                  component: () => import('../pages/data-display/CommentView.vue'),
                   meta: { title: "Comments" },
                }
             ]

@@ -1,0 +1,15 @@
+/* MUK CHART */
+
+@use '../../../abstracts/_muk-mixins' as *
+@use '../../../abstracts/_muk-tokens' as *
+
+.muk-chart__wrapper
+   display: grid
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+   gap: 12px
+   width: 100%
+
+.muk-chart
+   @include muk-border()
+   padding: 17px
+   background: $muk-bg

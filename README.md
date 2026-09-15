@@ -8,7 +8,7 @@ New components
 
 - MukMetricCard
   - import { MukMetricCard} from 'modular-ui-kit-vue'
-  - wrapper `.muk-metric-card__wrappe`
+  - wrapper `.muk-metric-card__wrapper`
 - MukChart
   - import { MukChart } from 'modular-ui-kit-vue'
   - wrapper .muk-chart\_\_wrapper`
@@ -124,7 +124,8 @@ Data Display
 
 - MukBadge: Compact badge component with icon, text, and size options
 - MukMetricCard: Metric card component featuring title/value displays, optional trend indicator with invert support, loading state, and custom #icon slot
-- MukTable classes only: '.muk-table-wrapper, '.muk-table', '.muk-table**actions--row' or '.muk-table**actions--column'
+- MukTable classes only: `.muk-table-wrapper`, `.muk-table`, `.muk-table__actions--row` or `.muk-table__actions--column`
+- MukChart: Chart component featuring a built-in empty state, a responsive skeleton loader matching the block size, an optional title (can be shown or hidden), and `.muk-chart__wrapper` for layout styling.
 
 ### Documentation
 

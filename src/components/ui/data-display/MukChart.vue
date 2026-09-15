@@ -1,7 +1,7 @@
 <template>
    <div class="muk-chart">
       <div v-if="title" class="muk-chart__header">
-         <muk-text>{{ title }}</muk-text>
+         <muk-text variant="muted" type="muk-subheading">{{ title }}</muk-text>
       </div>
       <div v-if="loading" class="muk-chart__loading" :style="{ height }">
          <muk-skeleton width="100%" height="100%" />

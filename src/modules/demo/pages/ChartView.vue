@@ -12,21 +12,18 @@
                   <muk-checkbox v-model="showTitle" label="Show Title" />
                   <muk-checkbox v-model="isEmpty" label="Empty Data" />
                </div>
-               <div class="muk-section">
-                  <muk-text :type="'muk-subheading'"></muk-text>
-                  <div class="muk-chart__wrapper">
-                     <div class="muk-chart-item">
-                        <muk-chart type="bar" :title="showTitle ? 'Monthly revenue ($)' : undefined"
-                           :data="isEmpty ? emptyChartData : barChartData" :loading="isLoading" height="280px" />
-                     </div>
-                     <div class="muk-chart-item">
-                        <muk-chart type="line" :title="showTitle ? 'User Acivity (2025- 2026)' : undefined"
-                           :data="isEmpty ? emptyChartData : lineChartData" :loading="isLoading" height="280px" />
-                     </div>
-                     <div class="muk-chart-item">
-                        <muk-chart type="doughnut" :title="showTitle ? 'Traffic Sources' : undefined"
-                           :data="isEmpty ? emptyChartData : doughnutChartData" :loading="isLoading" height="280px" />
-                     </div>
+               <div class="muk-section muk-chart__wrapper">
+                  <div class="muk-chart-item">
+                     <muk-chart type="bar" :title="showTitle ? 'Monthly revenue ($)' : undefined"
+                        :data="isEmpty ? emptyChartData : barChartData" :loading="isLoading" height="280px" />
+                  </div>
+                  <div class="muk-chart-item">
+                     <muk-chart type="line" :title="showTitle ? 'User Acivity (2025- 2026)' : undefined"
+                        :data="isEmpty ? emptyChartData : lineChartData" :loading="isLoading" height="280px" />
+                  </div>
+                  <div class="muk-chart-item">
+                     <muk-chart type="doughnut" :title="showTitle ? 'Traffic Sources' : undefined"
+                        :data="isEmpty ? emptyChartData : doughnutChartData" :loading="isLoading" height="280px" />
                   </div>
                </div>
             </div>

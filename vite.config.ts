@@ -37,7 +37,7 @@ export default defineConfig(({ command }) => {
     css: {
       preprocessorOptions: {
         sass: {
-          additionalData: `@use "@/assets/sass/abstracts/index" as *\n`
+          additionalData: `@use "@/lib/styles/abstracts/_index.sass" as *\n`
         }
       }
     },

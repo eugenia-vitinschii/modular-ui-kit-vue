@@ -1,44 +1,44 @@
 
 /*  STYLES */
-import './assets/sass/app.sass'
+import './lib/styles/lib.sass'
 
 /*  FORM ELEMENTS */
-export { default as MukCheckbox } from './components/ui/form/MukCheckbox.vue'
-export { default as MukInput } from './components/ui/form/MukInput.vue'
-export { default as MukRadio } from './components/ui/form/MukRadio.vue'
-export { default as MukSelect } from './components/ui/form/MukSelect.vue'
-export { default as MukTextarea } from './components/ui/form/MukTextarea.vue'
+export { default as MukCheckbox } from './lib/components/form/MukCheckbox.vue'
+export { default as MukInput } from './lib/components/form/MukInput.vue'
+export { default as MukRadio } from './lib/components/form/MukRadio.vue'
+export { default as MukSelect } from './lib/components/form/MukSelect.vue'
+export { default as MukTextarea } from './lib/components/form/MukTextarea.vue'
 
 /*  BUTTONS  */
-export { default as MukButton } from './components/ui/buttons/MukButton.vue'
-export { default as MukIconButton } from './components/ui/buttons/MukIconButton.vue'
+export { default as MukButton } from './lib/components/buttons/MukButton.vue'
+export { default as MukIconButton } from './lib/components/buttons/MukIconButton.vue'
 
 /*  FEEDBACK  */
-export { default as MukSkeleton } from './components/ui/feedback/MukSkeleton.vue'
-export { default as MukToast } from './components/ui/feedback/MukToast.vue'
-export { default as MukToastContainer } from './components/ui/feedback/MukToastContainer.vue'
-export { useMukToast } from './components/ui/feedback/useMukToast.ts'
-export { default as MukEmptyState } from './components/ui/feedback/MukEmptyState.vue'
-export { default as MukErrorState } from './components/ui/feedback/MukErrorState.vue'
+export { default as MukSkeleton } from './lib/components/feedback/MukSkeleton.vue'
+export { default as MukToast } from './lib/components/feedback/MukToast.vue'
+export { default as MukToastContainer } from './lib/components/feedback/MukToastContainer.vue'
+export { useMukToast } from './lib/components/feedback/useMukToast.ts'
+export { default as MukEmptyState } from './lib/components/feedback/MukEmptyState.vue'
+export { default as MukErrorState } from './lib/components/feedback/MukErrorState.vue'
 
 /*  NAVIGATIONS  */
-export { default as MukBreadcrumbs } from './components/ui/navigation/MukBreadcrumbs.vue'
-export { default as MukPagination } from './components/ui/navigation/MukPagination.vue'
+export { default as MukBreadcrumbs } from './lib/components/navigation/MukBreadcrumbs.vue'
+export { default as MukPagination } from './lib/components/navigation/MukPagination.vue'
 
 /*  OVERLAYS  */
-export { default as MukModal } from './components/ui/overlays/MukModal.vue'
+export { default as MukModal } from './lib/components/overlays/MukModal.vue'
 
 /*  TYPOGRAPHY */
-export { default as MukText } from './components/ui/typography/MukText.vue'
+export { default as MukText } from './lib/components/typography/MukText.vue'
 
 /* DATA DISPLAY */
-export { default as MukBadge } from './components/ui/data-display/MukBadge.vue'
-export { default as MukMetricCard } from './components/ui/data-display/MukMetricCard.vue'
-export { default as MukChart } from './components/ui/data-display/MukChart.vue'
+export { default as MukBadge } from './lib/components/data-display/MukBadge.vue'
+export { default as MukMetricCard } from './lib/components/data-display/MukMetricCard.vue'
+export { default as MukChart } from './lib/components/data-display/MukChart.vue'
 
 /* COMMNETS */
-export { default as MukCommentItem } from './components/ui/comments/MukCommentItem.vue'
-export { default as MukCommentForm } from './components/ui/comments/MukCommentForm.vue'
+export { default as MukCommentItem } from './lib/components/comments/MukCommentItem.vue'
+export { default as MukCommentForm } from './lib/components/comments/MukCommentForm.vue'
 
 /*  TYPES */
 export type {
@@ -46,4 +46,4 @@ export type {
    UITextType, UITextAlign, UITextVariant,
    UIButtonVariant, UIButtonType, UIEmptyStateVariant,
    UIInputType, UISkeletonType
-} from './types/ui.types'
+} from './lib/types/ui.types.ts'

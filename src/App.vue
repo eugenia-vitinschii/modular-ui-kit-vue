@@ -23,13 +23,13 @@
 import { useRoute } from 'vue-router';
 
 /* === COMPONENTS === */
-import AppHeader from './widgets/AppHeader.vue';
-import AppFooter from './widgets/AppFooter.vue';
-import MukBreadcrumbs from './components/ui/navigation/MukBreadcrumbs.vue';
-import MukToastContainer from './components/ui/feedback/MukToastContainer.vue';
+import AppHeader from './demo/components/AppHeader.vue';
+import AppFooter from './demo/components/AppFooter.vue';
+import MukBreadcrumbs from './lib/components/navigation/MukBreadcrumbs.vue';
+import MukToastContainer from './lib/components/feedback/MukToastContainer.vue';
 
 /* === DEMO === */
-import DemoWidget from './modules/demo/components/DemoWidget.vue';
+import DemoWidget from './demo/components/DemoWidget.vue';
 
 const route = useRoute()
 </script>

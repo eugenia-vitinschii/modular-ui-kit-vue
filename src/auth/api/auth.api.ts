@@ -1,6 +1,6 @@
 /* AUTH API */
 
-import { api } from "@/demo/api";
+import { api } from "@/auth/api";
 import type { LoginPayload, RegisterPayload, AuthResponse, User } from "../types";
 
 export const authApi = {

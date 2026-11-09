@@ -1,5 +1,4 @@
-
-/*  STYLES */
+// @ts-ignore
 import './lib/styles/lib.sass'
 
 /*  FORM ELEMENTS */

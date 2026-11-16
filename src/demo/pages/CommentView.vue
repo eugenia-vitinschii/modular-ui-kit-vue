@@ -71,12 +71,12 @@
 import { ref } from 'vue';
 
 /* COMPONENTS */
-import MukRadio from '@/components/ui/form/MukRadio.vue';
-import MukCheckbox from '@/components/ui/form/MukCheckbox.vue';
+import MukRadio from '@/lib/components/form/MukRadio.vue';
+import MukCheckbox from '@/lib/components/form/MukCheckbox.vue';
 import MukIconButton from '@/lib/components/buttons/MukIconButton.vue';
-import MukText from '@/components/MukText.vue';
-import MukCommentForm from '@/components/ui/comments/MukCommentForm.vue';
-import MukCommentItem from '@/components/ui/comments/MukCommentItem.vue';
+import MukText from '@/lib/components/typography/MukText.vue';
+import MukCommentForm from '@/lib/components/comments/MukCommentForm.vue';
+import MukCommentItem from '@/lib/components/comments/MukCommentItem.vue';
 
 
 const actionsMode = ref<'full' | 'likeOnly' | 'none'>('full');

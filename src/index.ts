@@ -1,4 +1,5 @@
-
+// @ts-ignore
+import 'modular-ui-kit-styles'
 
 /*  FORM ELEMENTS */
 export { default as MukCheckbox } from './lib/components/form/MukCheckbox.vue'

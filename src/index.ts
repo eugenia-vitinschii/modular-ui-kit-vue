@@ -1,5 +1,4 @@
-// @ts-ignore
-import './lib/styles/lib.sass'
+
 
 /*  FORM ELEMENTS */
 export { default as MukCheckbox } from './lib/components/form/MukCheckbox.vue'

@@ -34,14 +34,6 @@ export default defineConfig(({ command }) => {
       },
     },
 
-    css: {
-      preprocessorOptions: {
-        sass: {
-          additionalData: `@use "@/lib/styles/abstracts/_index.sass" as *\n`
-        }
-      }
-    },
-
     // build
     ...(isBuild && {
       build: {

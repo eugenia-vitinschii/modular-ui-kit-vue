@@ -58,7 +58,8 @@
     "vue-router": "^4.6.4"
   },
   "dependencies": {
-    "axios": "^1.18.0"
+    "axios": "^1.18.0",
+    "modular-ui-kit-styles": "^1.0.0"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.4",

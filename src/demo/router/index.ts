@@ -1,3 +1,5 @@
+// @ts-ignore
+import 'modular-ui-kit-styles'
 
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from "vue-router";

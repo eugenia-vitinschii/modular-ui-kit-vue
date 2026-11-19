@@ -7,7 +7,7 @@
       </muk-icon-button>
       <div class="muk-pagination__desktop">
          <muk-icon-button v-for="i in pages" :key="i + ''" :disabled="i === '...'" :class="{ 'is-active': i === page }"
-            @click="typeof i === 'number' && $emit('change', i)" :muk-label="i">
+            @click="typeof i === 'number' && $emit('change', i)">
             <muk-text>{{ i }}</muk-text>
          </muk-icon-button>
       </div>

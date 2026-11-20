@@ -205,9 +205,53 @@ _This component does not define custom slots._
 
 ### 🟢 MukCheckbox 🟢
 
----
+A styled checkbox form control supporting `v-model` boolean binding, side label, helper hint, validation error message, and accessibility attributes (`aria-invalid`, `aria-describedby`).
+
+#### Props
+
+| Prop         | Type      | Default     | Description                                                                                          |
+| :----------- | :-------- | :---------- | :--------------------------------------------------------------------------------------------------- |
+| `modelValue` | `boolean` | `false`     | Checked state bound via `v-model`.                                                                   |
+| `label`      | `string`  | `undefined` | Optional label text rendered alongside the checkbox box.                                             |
+| `hint`       | `string`  | `undefined` | Helper text shown below the control when `error` is not set.                                         |
+| `error`      | `string`  | `undefined` | Validation error message; applies the `is-error` state (`aria-invalid="true"`) and overrides `hint`. |
+| `disabled`   | `boolean` | `false`     | Disables the checkbox and prevents toggling.                                                         |
+
+#### Emits
+
+| Event               | Payload          | Description                              |
+| :------------------ | :--------------- | :--------------------------------------- |
+| `update:modelValue` | `value: boolean` | Emitted when the checkbox state changes. |
+
+### Slots
+
+_This component does not define custom slots._
 
 ### 🟢 MukRadio 🟢
+
+A styled radio button control supporting `v-model` binding across primitive value types (`boolean`, `string`, `number`), native group naming, side label, helper hint, validation error state, and accessibility attributes (`aria-invalid`, `aria-describedby`).
+
+#### Props
+
+| Prop         | Type                                  | Default     | Description                                                                                          |
+| :----------- | :------------------------------------ | :---------- | :--------------------------------------------------------------------------------------------------- |
+| `modelValue` | `boolean \| string \| number \| null` | —           | Currently selected value of the radio group (`v-model`).                                             |
+| `value`      | `boolean \| string \| number`         | —           | Value emitted and matched against `modelValue` when this radio option is selected.                   |
+| `name`       | `string`                              | —           | Native HTML `name` attribute used to group related radio buttons.                                    |
+| `label`      | `string`                              | `undefined` | Optional label text rendered alongside the radio indicator.                                          |
+| `hint`       | `string`                              | `undefined` | Helper text displayed below the control when `error` is not set.                                     |
+| `error`      | `string`                              | `undefined` | Validation error message; applies the `is-error` state (`aria-invalid="true"`) and overrides `hint`. |
+| `disabled`   | `boolean`                             | `false`     | Disables the radio button and prevents selection.                                                    |
+
+#### Emits
+
+| Event               | Payload                              | Description                                      |
+| :------------------ | :----------------------------------- | :----------------------------------------------- |
+| `update:modelValue` | `value: boolean \| string \| number` | Emitted with the option's `value` when selected. |
+
+#### Slots
+
+_This component does not define custom slots._
 
 ---
 

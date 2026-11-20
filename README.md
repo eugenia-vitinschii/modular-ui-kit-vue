@@ -4,47 +4,6 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/modular-ui-kit-vue?color=35495e)](https://www.npmjs.com/package/modular-ui-kit-vue)
 [![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/eugenia-vitinschii/2e6247835bbf3928be881ca260cad051/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
 
-New components
-
-- MukMetricCard
-  - import { MukMetricCard} from 'modular-ui-kit-vue'
-  - wrapper `.muk-metric-card__wrapper`
-- MukChart
-  - import { MukChart } from 'modular-ui-kit-vue'
-  - wrapper .muk-chart\_\_wrapper`
-  - requires `chart.js` as a peer dependency
-
-Feedback components update
-
-- added dynamic `width` and `height` props ( string | number )
-  - `<muk-empty-state height="100%" width="100%" />`
-  - `<muk-error-state height="100%" width="100%" />`
-
-New helper class Responsive SVG Icon
-
-- muk-svg-icon
-
-  ⚠️ Upgrading to Version 2.0.0 (Breaking Changes)
-  If you are upgrading from v1.x and your components do not use the Muk prefix (e.g., you were using BaseInput instead of MukInput), please follow these steps to perform a clean reinstallation and flush the package cache:
-
-Uninstall the old version:
-
-```
-npm uninstall modular-ui-kit-vue
-```
-
-Clear the npm cache:
-
-```
-npm cache clean --force
-```
-
-Install the new version 2.0.0:
-
-```
-npm i modular-ui-kit-vue@2.0.0 --legacy-peer-deps
-```
-
 A lightweight, high-performance UI component library for **Vue 3 + TypeScript**. Built on a unified system of design tokens, thoughtful accessibility (a11y) basics, and maximum performance optimization.
 
 [Demo Project (main branch)](https://github.com/eugenia-vitinschii/modular-ui-kit-vue/tree/main) •
@@ -67,7 +26,6 @@ npm install modular-ui-kit-vue
 pnpm add modular-ui-kit-vue
 # or
 yarn add modular-ui-kit-vue
-
 
 ```
 
@@ -127,246 +85,176 @@ Data Display
 - MukTable classes only: `.muk-table-wrapper`, `.muk-table`, `.muk-table__actions--row` or `.muk-table__actions--column`
 - MukChart: Chart component featuring a built-in empty state, a responsive skeleton loader matching the block size, an optional title (can be shown or hidden), and `.muk-chart__wrapper` for layout styling.
 
+Comments
+
+- MukCommentItem
+- MukCommentForn
+
 ### Documentation
 
 [![Wiki Documentation](https://img.shields.io/badge/docs-GitHub_Wiki-blue?style=for-the-badge&logo=github)](https://github.com/eugenia-vitinschii/modular-ui-kit/wiki/Muk-Button-Component)
 
-#### Form Elements
+### 🟢 MukText 🟢
 
-```
-import { MukInput, MukSelect, MukTextarea, MukCheckbox, MukRadio } from 'modular-ui-kit-vue'
-```
+A polymorphic typography component used to render semantic text elements (`p`, `span`, headings, links, etc.) with consistent font scales, color variants, and alignment tokens.
 
-All form elements includes:
+#### Props
 
-- label?: sting
-- hint?: string
-- error?: string
-- disabled?: boolean; default: false
+| Prop      | Type            | Default           | Description                                                          |
+| :-------- | :-------------- | :---------------- | :------------------------------------------------------------------- |
+| `as`      | `string`        | `'p'`             | HTML tag or custom component name to render as the root element.     |
+| `type`    | `UITextType`    | `'muk-body-text'` | Typography preset class defining font size, weight, and line height. |
+| `variant` | `UITextVariant` | `'secondary'`     | Semantic text color variant mapped to theme design tokens.           |
+| `align`   | `UITextAlign`   | `'left'`          | Horizontal text alignment (`left`, `center`, `right`, etc.).         |
 
-```
-import { MukInput } from 'modular-ui-kit-vue'
-```
+#### Emits
 
-- type?: UIInputType; default: ‘text’’
-- autocomplete?: string
-- placeholder?: string
+_This component does not emit custom events._
 
-Supported variants:
+#### Slots
 
-- type UIInputType = 'text' | 'email' | 'password' | 'search' | 'date' | 'tel' | 'number'
+| Slot      | Description                                                             |
+| :-------- | :---------------------------------------------------------------------- |
+| `default` | Text content or inline elements rendered inside the typography wrapper. |
 
-```
-import { MukTextarea } from 'modular-ui-kit-vue'
-```
+---
 
-- rows: number
+### 🟢 MukButton 🟢
 
-```
-import { MukRadio } from 'modular-ui-kit-vue'
-```
+An interactive button component supporting visual variants, sizes, a built-in loading spinner state, and accessibility attributes (`disabled`, `aria-busy`, and screen-reader loading text).
 
-- name: string
+#### Props
 
-#### Typography
+| Prop       | Type              | Default     | Description                                                               |
+| :--------- | :---------------- | :---------- | :------------------------------------------------------------------------ |
+| `variant`  | `UIButtonVariant` | `'primary'` | Visual style variant of the button (e.g., primary, secondary, outline).   |
+| `size`     | `UISize`          | `'lg'`      | Button size preset (`sm`, `md`, `lg`, etc.).                              |
+| `type`     | `UIButtonType`    | `'button'`  | Native HTML button type (`'button'`, `'submit'`, `'reset'`).              |
+| `loading`  | `boolean`         | `false`     | Replaces slot content with a loading spinner and sets `aria-busy="true"`. |
+| `disabled` | `boolean`         | `false`     | Disables user interaction and applies the native `disabled` attribute.    |
 
-```
-import { MukText } from 'modular-ui-kit-vue'
-```
+#### Emits
 
-- variant?: UITextVariant, default: ‘secondary’
-- as?: string, default: ‘p’
-- type?: UITextType, default: ‘muk-body-text’
-- align?: UITextAlign, default: ‘left’
+_This component does not emit custom events (native `click` events propagate to the root `<button>`)._
 
-Supported variants:
+#### Slots
 
-- type UIVariant = 'primary' | 'danger' | 'warning' | 'success' | 'secondary'
-- type UITextVariant = UIVariant | 'muted'
-- type UITextType = 'muk-heading' | 'muk-subheading' | 'muk-body-text'| 'muk-caption' | 'muk-none'
-- type UITextAlign = 'left' | 'center' | 'right'
+| Slot      | Description                                                                |
+| :-------- | :------------------------------------------------------------------------- |
+| `default` | Button label, icons, or custom content rendered when `loading` is `false`. |
 
-#### Buttons
+---
 
-```
-import { MukButton, MukIconButton } from 'modular-ui-kit-vue'
-```
+### 🟢 MukIconButton 🟢
 
-For Both:
+An icon-focused button component supporting visual variants, sizes, a loading spinner state, an optional text slot, and explicit `aria-label` accessibility support.
 
-- variant?: UIButtonVariant, default: primary
-- size?: UISize, default: lg
-- type?: UIButtonType, default: button
-- loading?: boolean, default: false
-- disabled?: boolean, default: false
+#### Props
 
-- - Icon button includes slot for svg
+| Prop        | Type               | Default     | Description                                                                                      |
+| :---------- | :----------------- | :---------- | :----------------------------------------------------------------------------------------------- |
+| `ariaLabel` | `string \| number` | `undefined` | Accessible label (`aria-label`) for screen readers, especially when rendering icon-only buttons. |
+| `variant`   | `UIButtonVariant`  | `'primary'` | Visual style variant of the button.                                                              |
+| `size`      | `UISize`           | `'lg'`      | Button size preset (`sm`, `md`, `lg`, etc.).                                                     |
+| `type`      | `UIButtonType`     | `'button'`  | Native HTML button type (`'button'`, `'submit'`, `'reset'`).                                     |
+| `loading`   | `boolean`          | `false`     | Replaces content with a spinner and sets `aria-busy="true"`.                                     |
+| `disabled`  | `boolean`          | `false`     | Disables the button and applies the native `disabled` attribute.                                 |
 
-Supported variants:
+#### Emits
 
-- type UIVariant = 'primary' | 'danger' | 'warning' | 'success' | 'secondary'
-- type UIButtonVariant = UIVariant | 'ghost'
-- type UISize = 'sm' | 'md' | 'lg'
-- type UIButtonType = 'button' | 'submit' | 'reset'
+_This component does not emit custom events (native `click` events propagate to the root `<button>`)._
 
-### Types
+#### Slots
 
-```
-/* UI VARIANTS */
-export type UIVariant = 'primary' | 'danger' | 'warning' | 'success' | 'secondary'
-export type UISize = 'sm' | 'md' | 'lg'
+| Slot      | Description                                                                                           |
+| :-------- | :---------------------------------------------------------------------------------------------------- |
+| `default` | Primary icon content rendered inside the button when not loading.                                     |
+| `text`    | Optional label text rendered alongside the icon; automatically applies the `has-text` modifier class. |
 
-/* TEXT */
-export type UITextType = 'muk-heading' | 'muk-subheading' | 'muk-body-text' | 'muk-caption' | 'muk-none'
-export type UITextAlign = 'left' | 'center' | 'right'
-export type UITextVariant = UIVariant | 'muted'
+---
 
-/* BUTTONS */
-export type UIButtonVariant = UIVariant | 'ghost'
-export type UIButtonType = 'button' | 'submit' | 'reset'
+### 🟢 MukInput 🟢
 
-/* EMPTY STATE VARIANT */
-export type UIEmptyStateVariant = 'secondary' | 'primary'
+A form input component supporting `v-model` binding (with automatic number casting when `type="number"`), label, helper hint, validation error message, accessibility attributes (`aria-invalid`, `aria-describedby`), and an optional password visibility toggle.
 
-/* INPUT TYPE */
-export type UIInputType = 'text' | 'email' | 'password' | 'search' | 'date' | 'tel' | 'number'
+#### Props
 
-/* SKELTON TYPE */
-export type UISkeletonType = 'text' | 'circle' | 'rect'
-```
+| Prop                 | Type                            | Default     | Description                                                                                                    |
+| :------------------- | :------------------------------ | :---------- | :------------------------------------------------------------------------------------------------------------- |
+| `modelValue`         | `string \| number \| undefined` | —           | Bound input value (`v-model`).                                                                                 |
+| `label`              | `string`                        | `undefined` | Optional field label rendered above the input and linked via `for`/`id`.                                       |
+| `placeholder`        | `string`                        | `undefined` | Placeholder text shown when the input is empty.                                                                |
+| `hint`               | `string`                        | `undefined` | Helper text displayed below the input when `error` is not set.                                                 |
+| `error`              | `string`                        | `undefined` | Validation error message; marks the input as invalid (`is-error`, `aria-invalid="true"`) and overrides `hint`. |
+| `disabled`           | `boolean`                       | `false`     | Disables the input field and prevents user interaction.                                                        |
+| `type`               | `UIInputType`                   | `'text'`    | Input type (e.g., `'text'`, `'password'`, `'number'`, `'email'`, etc.).                                        |
+| `autocomplete`       | `string`                        | `undefined` | Native browser `autocomplete` attribute value.                                                                 |
+| `showPasswordToggle` | `boolean`                       | `true`      | Shows or hides the password visibility toggle button when `type="password"`.                                   |
 
-### Accessibility (a11y)
+#### Emits
 
-All components are built with basic accessibility in mind:
+| Event               | Payload                   | Description                                                                                   |
+| :------------------ | :------------------------ | :-------------------------------------------------------------------------------------------- |
+| `update:modelValue` | `value: string \| number` | Emitted on input change; converts non-empty values to `Number` when input type is `'number'`. |
 
-- Native keyboard navigation support (Focus states, `Enter` / `Space` key handlers).
-- Proper ARIA attributes (`aria-expanded`, `aria-hidden`) out of the box.
-- High-contrast focus rings for better visibility.
+#### Slots
 
-### Design Tokens
+_This component does not define custom slots._
 
-modular-ui-kit-vue is built using native CSS variables. You can easily override default colors, typography, borders, and spacing to match your brand design.
+---
 
-open or create app.sass, copy and use:
+### 🟢 MukCheckbox 🟢
 
-```
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap')
+---
 
-:root
-  /* === Colors: Text === */
-  --muk-text: #0f172a
-  --muk-text-muted: #64748b
+### 🟢 MukRadio 🟢
 
-  /* === Colors: Backgrounds === */
-  --muk-bg: #f8fafc
-  --muk-bg-soft: #f1f5f9
-  --muk-bg-card: #ffffff
-  --muk-bg-code: #e2e8f0
+---
 
-  /* === Colors: Accents & Statuses === */
-  --muk-primary: #0891b2
-  --muk-primary-hover: #0e7490
-  --muk-danger: #e11d48
-  --muk-success: #059669
-  --muk-warning: #d97706
+### 🟢 MukSelect 🟢
 
-  /* === Typography === */
-  --muk-font-family: 'Inter', system-ui, -apple-system, sans-serif
+---
 
-  --muk-font-heading: 26px
-  --muk-font-subheading: 19px
-  --muk-font-body: 16px
-  --muk-caption: 14px
+### 🟢 MukTextarea 🟢
 
-  --muk-font-heading-md: 24px
-  --muk-font-subheading-md: 18px
-  --muk-font-body-md: 15px
-  --muk-caption-md: 13px
+---
 
-  --muk-font-heading-sm: 20px
-  --muk-font-subheading-sm: 16px
-  --muk-font-body-sm: 14px
-  --muk-caption-sm: 13px
+### 🟢 MukEmptyState 🟢
 
-  /* === Borders === */
-  --muk-border-color: rgba(236, 238, 242, 0.08)
-  --muk-border-width: 1px
-  --muk-border-style: solid
-  --muk-border-radius: 10px
+---
 
-  /* === Space Tokens: Elements (inputs, buttons, icons) === */
-  --muk-space-content-sm: 6px
-  --muk-space-content-md: 10px
-  --muk-space-content-lg: 14px
+### 🟢 MukErrorState 🟢
 
-  /* === Space Tokens: Containers (forms, cards, sections) === */
-  --muk-space-container-sm: 16px
-  --muk-space-container-md: 24px
-  --muk-space-container-lg: 32px
+---
 
-  /* === Design Utilities === */
-  --muk-transition: all 0.3s ease-out
-  --muk-opacity: 0.4
+### 🟢 MukSkeleton 🟢
 
-```
+---
 
-```
-/* === Colors === */
-$muk-text: var(--muk-text)
-$muk-text-muted: var(--muk-text-muted)
+### 🟢 MukBadge 🟢
 
-$muk-bg: var(--muk-bg)
-$muk-bg-soft: var(--muk-bg-soft)
-$muk-bg-card: var(--muk-bg-card)
-$muk-bg-code: var(--muk-bg-code)
+---
 
-$muk-primary: var(--muk-primary)
-$muk-primary-hover: var(--muk-primary-hover)
-$muk-danger: var(--muk-danger)
-$muk-success: var(--muk-success)
-$muk-warning: var(--muk-warning)
+### 🟢 MukToast 🟢
 
-/* === Typography === */
-$muk-font-family: var(--muk-font-family)
+---
 
-$muk-heading: var(--muk-font-heading)
-$muk-subheading: var(--muk-font-subheading)
-$muk-body-text: var(--muk-font-body)
-$muk-caption: var(--muk-caption)
+### 🟢 MukModal 🟢
 
-$muk-heading-md: var(--muk-font-heading-md)
-$muk-subheading-md: var(--muk-font-subheading-md)
-$muk-body-text-md: var(--muk-font-body-md)
-$muk-caption-md: var(--muk-caption-md)
+---
 
-$muk-heading-sm: var(--muk-font-heading-sm)
-$muk-subheading-sm: var(--muk-font-subheading-sm)
-$muk-body-text-sm: var(--muk-font-body-sm)
-$muk-caption-sm: var(--muk-caption-sm)
+### 🟢 MukCommentItem 🟢
 
-/* === Borders === */
-$muk-border-color: var(--muk-border-color)
-$muk-border-width: var(--muk-border-width)
-$muk-border-style: var(--muk-border-style)
-$muk-border-radius: var(--muk-border-radius)
+---
 
-/* === Space Tokens === */
-$muk-space-content-sm: var(--muk-space-content-sm)
-$muk-space-content-md: var(--muk-space-content-md)
-$muk-space-content-lg: var(--muk-space-content-lg)
+### 🟢 MukCommentForm 🟢
 
-$muk-space-container-sm: var(--muk-space-container-sm)
-$muk-space-container-md: var(--muk-space-container-md)
-$muk-space-container-lg: var(--muk-space-container-lg)
+---
 
-/* === Design === */
-$muk-transition: var(--muk-transition)
-$muk-opacity: var(--muk-opacity)
-```
+### 🟢 MukMetricCard 🟢
 
-import styles inside main.ts
+---
 
-```
-import 'modular-ui-kit-vue/dist/modular-ui-kit-vue.css'
-import '@/assets/sass/app.sass'
-```
+### 🟢 MukPagination 🟢
+
+---

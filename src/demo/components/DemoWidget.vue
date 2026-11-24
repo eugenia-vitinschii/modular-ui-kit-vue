@@ -25,8 +25,3 @@ function toggleMenu() {
 }
 
 </script>
-
-<style lang="sass">
-
-
-</style>

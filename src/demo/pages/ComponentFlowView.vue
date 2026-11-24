@@ -111,13 +111,3 @@ const handleRetry = () => {
 const currentPage = ref(2)
 
 </script>
-<style lang="sass">
-
-.article:first-child
-   margin-top: 0px
-
-.skeleton-card
-   margin-top: 20px
-.skeleton-item
-   margin-top: 10px
-</style>

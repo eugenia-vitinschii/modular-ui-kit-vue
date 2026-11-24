@@ -1,7 +1,7 @@
 <template>
    <aside class="demo-nav">
       <div class="demo-nav__header">
-         <muk-text :type="'muk-subheading'">UI Kit Showcase</muk-text>
+         <muk-text type="muk-subheading">UI Kit Showcase</muk-text>
          <muk-icon-button aria-label="Close Demo" @click="$emit('close')">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                <path
@@ -78,12 +78,3 @@ const navConfig: NavGroup[] = [
    }
 ]
 </script>
-<style lang="sass">
-
-.demo-nav
-   &__header
-      display: flex
-      justify-content: space-between
-      align-items: center
-
-</style>

@@ -87,12 +87,3 @@ const sizes: UISize[] = ['sm', 'md', 'lg']
 
 const selectedVariant = ref<UITextVariant>('secondary')
 </script>
-
-<style lang="sass">
-
-.badges-wrapper
-   display: flex
-   justify-content: space-between
-   flex-wrap: wrap
-
-</style>

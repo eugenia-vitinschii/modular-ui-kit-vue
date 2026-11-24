@@ -118,20 +118,3 @@ const variants: UIButtonVariant[] = [
 const sizes: UISize[] = ['sm', 'md', 'lg']
 const isLiked = ref(false)
 </script>
-
-<style lang="sass">
-.buttons-grid
-   display: grid
-   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-   gap: 10px
-
-.button-card
-   padding: 16px
-
-.button-card-row
-   display: flex
-   align-items: center
-   justify-content: space-between
-   overflow: scroll
-
-</style>

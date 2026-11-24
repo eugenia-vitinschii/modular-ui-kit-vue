@@ -33,19 +33,3 @@ function onAction() {
    emit('action')
 }
 </script>
-
-<style lang="sass">
-.error-page-wrapper
-   height: 100vh
-   display: flex
-   align-items: center
-   flex-direction: column
-   justify-content: center
-
-.muk-error-page
-   max-width: 500px
-   display: flex
-   flex-direction: column
-   align-items: center
-
-</style>

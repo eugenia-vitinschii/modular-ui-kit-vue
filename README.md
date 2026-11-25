@@ -257,11 +257,55 @@ _This component does not define custom slots._
 
 ### 🟢 MukSelect 🟢
 
----
+A select dropdown form control built around a native `<select>` element, supporting `v-model` binding, structured options, placeholder, label, helper hint, validation error state, and accessibility attributes (`aria-invalid`, `aria-describedby`).
+
+#### Props
+
+| Prop          | Type               | Default     | Description                                                                                          |
+| :------------ | :----------------- | :---------- | :--------------------------------------------------------------------------------------------------- |
+| `modelValue`  | `string \| number` | `""`        | Selected value bound via `v-model`.                                                                  |
+| `options`     | `Option[]`         | —           | Array of selectable options (`{ label: string; value: string \| number }`).                          |
+| `label`       | `string`           | `undefined` | Optional label text rendered above the select and linked via `for`/`id`.                             |
+| `placeholder` | `string`           | `undefined` | Disabled empty-value option rendered first when provided.                                            |
+| `hint`        | `string`           | `undefined` | Helper text displayed below the field when `error` is not set.                                       |
+| `error`       | `string`           | `undefined` | Validation error message; applies the `is-error` state (`aria-invalid="true"`) and overrides `hint`. |
+| `disabled`    | `boolean`          | `false`     | Disables the select element and prevents interaction.                                                |
+
+#### Emits
+
+| Event               | Payload                   | Description                                             |
+| :------------------ | :------------------------ | :------------------------------------------------------ |
+| `update:modelValue` | `value: string \| number` | Emitted with the newly selected option value on change. |
+
+#### Slots
+
+_This component does not define custom slots._
 
 ### 🟢 MukTextarea 🟢
 
----
+A multi-line text input component built around a native `<textarea>` element, supporting `v-model` binding, configurable visible row count, label, helper hint, validation error state, and accessibility attributes (`aria-invalid`, `aria-describedby`).
+
+#### Props
+
+| Prop          | Type                  | Default     | Description                                                                                          |
+| :------------ | :-------------------- | :---------- | :--------------------------------------------------------------------------------------------------- |
+| `modelValue`  | `string \| undefined` | `""`        | Bound text value (`v-model`).                                                                        |
+| `rows`        | `number`              | `6`         | Number of visible text lines (`rows` attribute).                                                     |
+| `label`       | `string`              | `undefined` | Optional label text rendered above the textarea and linked via `for`/`id`.                           |
+| `placeholder` | `string`              | `undefined` | Placeholder text shown when the field is empty.                                                      |
+| `hint`        | `string`              | `undefined` | Helper text displayed below the textarea when `error` is not set.                                    |
+| `error`       | `string`              | `undefined` | Validation error message; applies the `is-error` state (`aria-invalid="true"`) and overrides `hint`. |
+| `disabled`    | `boolean`             | `false`     | Disables the textarea and prevents user interaction.                                                 |
+
+#### Emits
+
+| Event               | Payload         | Description                                               |
+| :------------------ | :-------------- | :-------------------------------------------------------- |
+| `update:modelValue` | `value: string` | Emitted on input change with the updated textarea string. |
+
+#### Slots
+
+## _This component does not define custom slots._
 
 ### 🟢 MukEmptyState 🟢
 

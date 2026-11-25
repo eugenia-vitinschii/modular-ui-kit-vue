@@ -309,6 +309,28 @@ A multi-line text input component built around a native `<textarea>` element, su
 
 ### 🟢 MukEmptyState 🟢
 
+An empty-state placeholder component displaying a heading and description with visual variants, customizable dimensions (`width` and `height` formatted via `formatSize`), and an optional action slot.
+
+#### Props
+
+| Prop          | Type                  | Default                                                                            | Description                                                    |
+| :------------ | :-------------------- | :--------------------------------------------------------------------------------- | :------------------------------------------------------------- |
+| `title`       | `string`              | `"No data available"`                                                              | Heading text rendered inside an `h3` via `MukText`.            |
+| `description` | `string`              | `'There is nothing to display here at the moment. Please try refreshing the page'` | Supporting body message describing the empty state.            |
+| `variant`     | `UIEmptyStateVariant` | `'secondary'`                                                                      | Visual style variant applied as `muk-empty-state--${variant}`. |
+| `width`       | `string \| number`    | `undefined`                                                                        | Custom container width normalized with `formatSize`.           |
+| `height`      | `string \| number`    | `undefined`                                                                        | Custom container height normalized with `formatSize`.          |
+
+#### Emits
+
+_This component does not emit custom events._
+
+#### Slots
+
+| Slot     | Description                                                                                      |
+| :------- | :----------------------------------------------------------------------------------------------- |
+| `action` | Optional action controls (such as a button or link) rendered inside `.muk-empty-state__actions`. |
+
 ---
 
 ### 🟢 MukErrorState 🟢
@@ -346,3 +368,32 @@ A multi-line text input component built around a native `<textarea>` element, su
 ### 🟢 MukPagination 🟢
 
 ---
+
+## UI Types
+
+Shared TypeScript union types used across `modular-ui-kit-vue` components for variants, sizes, typography, controls, and loading placeholders. Importing and re-exporting them from your package entry lets consumers type component props, wrappers, and form state safely.
+
+### Base & Layout Types
+
+| Type        | Values                                                           | Used By                                                          |
+| :---------- | :--------------------------------------------------------------- | :--------------------------------------------------------------- |
+| `UIVariant` | `'primary' \| 'danger' \| 'warning' \| 'success' \| 'secondary'` | Base semantic palette for buttons, text variants, and extensions |
+| `UISize`    | `'sm' \| 'md' \| 'lg'`                                           | Size presets across interactive controls (such as buttons)       |
+
+### Typography Types
+
+| Type            | Values                                                                                | Used By                                             |
+| :-------------- | :------------------------------------------------------------------------------------ | :-------------------------------------------------- |
+| `UITextType`    | `'muk-heading' \| 'muk-subheading' \| 'muk-body-text' \| 'muk-caption' \| 'muk-none'` | Typography scale and semantic text role (`MukText`) |
+| `UITextAlign`   | `'left' \| 'center' \| 'right'`                                                       | Horizontal text alignment (`MukText`)               |
+| `UITextVariant` | `UIVariant \| 'muted'`                                                                | Text color variant (`MukText`)                      |
+
+### Component-Specific Types
+
+| Type                  | Values                                                                       | Used By                                                    |
+| :-------------------- | :--------------------------------------------------------------------------- | :--------------------------------------------------------- |
+| `UIButtonVariant`     | `UIVariant \| 'ghost'`                                                       | Button visual style variant (`MukButton`, `MukButtonIcon`) |
+| `UIButtonType`        | `'button' \| 'submit' \| 'reset'`                                            | Native HTML button behavior (`MukButton`, `MukButtonIcon`) |
+| `UIEmptyStateVariant` | `'secondary' \| 'primary'`                                                   | Surface variant for empty states (`MukEmptyState`)         |
+| `UIInputType`         | `'text' \| 'email' \| 'password' \| 'search' \| 'date' \| 'tel' \| 'number'` | Input field mode (`MukInput`)                              |
+| `UISkeletonType`      | `'text' \| 'circle' \| 'rect'`                                               | Skeleton placeholder shape                                 |
